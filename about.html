@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Gabu Design</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/slicknav.css" />
+<script src="js/jquery.slicknav.min.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/wow.min.js"></script>
+<link rel="stylesheet" href="style/css/animate.css">
+</head>
+<body>
+
+<!-- トップコンテンツ -->
+<div id="topcontent">
+
+<!-- コンテナ -->
+<div id="container">
+
+<!-- l-header -->
+<header class="l-header l-header--main">
+	<div class="mod-header-inner">
+		<h1 class="mod-logo"><a href="index.html">Gabu Design</a></h1>
+		<div class="mod-header-nav" id="menu">
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="works.html">Photo</a></li>
+				<li><a href="website.html">Website</a></li>
+				<li><a href="">Information</a></li>
+				<li><a href="http://memogabu.com/">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- l-header --></header>
+
+</div>
+
+<div class="l-header l-header--about">
+</div>
+
+<div class="l-sec mod-about">
+	<div class="mod-about-inner">
+		<h2 class="mod-about-title">About me</h2>
+		<div class="mod-about-blk">
+
+		<div class="mod-about-textblk">
+			<p class="mod-about-lead">I'm a Japanese markup engineer at Tokyo</p>
+			<ul class="mod-about-sns">
+				<li><a href="" target="_blank">twitter</a></li>
+				<li><a href="" target="_blank">facebook</a></li>
+				<li><a href="https://github.com/gabu12589" target="_blank">GitHub</a></li>
+			</ul>
+		</div>
+
+		<div class="mod-about-photo mod-about-profile--small">
+			<p><img src="images/profile.jpg" alt=""></p>
+		</div>
+		</div>
+	</div>
+<!-- //mod-about --></div>
+
+<footer id="footer">
+	<address>Copyright &copy; <a href="mailto:<?php bloginfo('admin_email'); ?>">Gabu Design</a>, All rights reserved.</address>
+	<div class="footer-inner">
+		<a href="#" id="page-top1">top</a>
+	</div>
+</footer>
+
+<script>
+ new WOW().init();
+</script>
+
+<script>
+  $(function(){
+    $("#menu").slicknav;
+  });
+</script>
+
+<script>
+$(function () {
+    hsize = $(window).height();
+    $("#s01").css("height", hsize + "px");
+});
+$(window).resize(function () {
+    hsize = $(window).height();
+    $("#s01").css("height", hsize + "px");
+});
+
+$(function(){
+  var pageTop = $("#page-top");
+
+  pageTop.hide();
+
+  pageTop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+  $(window).scroll(function () {
+    if($(this).scrollTop() >= 200) {
+      pageTop.fadeIn();
+    } else {
+      pageTop.fadeOut();
+    }
+  });
+});
+</script>
+</body>
+</html>
+

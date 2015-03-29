@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Gabu Design</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/slicknav.css" />
+<script src="js/jquery.slicknav.min.js"></script>
+
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/lightbox.js"></script>
+
+<script src="js/wow.min.js"></script>
+
+
+
+<link rel="stylesheet" href="style/css/animate.css">
+</head>
+<body>
+
+<!-- トップコンテンツ -->
+<div id="topcontent">
+
+<!-- コンテナ -->
+
+<!-- l-header -->
+<header class="l-header l-header--main">
+	<div class="mod-header-inner">
+		<h1 class="mod-logo"><a href="index.html">Gabu Design</a></h1>
+		<div class="mod-header-nav" id="menu">
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="works.html">Photo</a></li>
+				<li><a href="website.html">Website</a></li>
+				<li><a href="">Information</a></li>
+				<li><a href="http://memogabu.com/">Blog</li>
+			</ul>
+		</div>
+	</div>
+<!-- l-header --></header>
+
+
+<div class="l-mainvisual l-mainvisual--main" id="s01">
+	<div class="mod-mainvisual-inner" id="s01">
+		<h2 class="mod-mainvisual-title">Gabu Design</h2>
+		<p class="mod-mainvisual-lead">I'm a Markup Engineer in Japan</p>
+	</div>
+<!-- l-mainvisual --></div>
+
+<div class="l-sec mod-about wow fadeInUp">
+	<div class="mod-about-inner clearfix">
+		<h2 class="sec-title">About Me</h2>
+		<div class="mod-about-blk">
+
+			<div class="mod-about-photo">
+				<p><img src="images/profile.jpg" alt=""></p>
+			</div>
+
+			<div class="mod-about-textblk">
+				<p>こんにちは<br>東京で働くマークアップエンジニアです。<br>このサイトに作った物を置いていく予定です。<br>まだ作ったばかりで準備中の部分が多いですが、<br>徐々に作った物を置いていきます。</p>
+			</div>
+		</div>
+	</div>
+	<p><a href="http://localhost:8888/wordpress/?page_id=9" class="btn btn--m" title="">Aboutをもっと見る</a></p>
+<!-- //mod-about --></div>
+
+<div class="l-sec mod-work wow fadeInUp">
+<h2 class="sec-title sec-title--work">Photo</h2>
+	<ul class="mod-work-workslist">
+		<li>
+			<p><img src="images/sample1.jpg" alt=""></p>
+			<p>準備中</p>
+		</li>
+		<li>
+			<p><img src="images/sample2.jpg" alt=""></p>
+			<p>準備中</p>
+		</li>
+		<li>
+			<p><img src="images/sample3.jpg" alt=""></p>
+			<p>準備中</p>
+		</li>
+	</ul>
+	<p><a href="http://localhost:8888/wordpress/?page_id=11" class="btn btn--m" title="">Photoをもっと見る</a></p>
+<!-- //mod-work --></div>
+
+
+<footer id="footer">
+	<address>Copyright &copy; <a href="mailto:<?php bloginfo('admin_email'); ?>">Gabu Design</a>, All rights reserved.</address>
+	<div class="footer-inner">
+		<a href="#" id="page-top1">top</a>
+	</div>
+</footer>
+
+<!-- topcontent --></div>
+
+<!-- javascript -->
+<script>
+ new WOW().init();
+</script>
+
+<script>
+  $(function(){
+    $("#menu").slicknav;
+  });
+</script>
+
+<script>
+$(function () {
+    hsize = $(window).height();
+    $("#s01").css("height", hsize + "px");
+});
+$(window).resize(function () {
+    hsize = $(window).height();
+    $("#s01").css("height", hsize + "px");
+});
+
+$(function(){
+  var pageTop = $("#page-top");
+
+  pageTop.hide();
+
+  pageTop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+  $(window).scroll(function () {
+    if($(this).scrollTop() >= 200) {
+      pageTop.fadeIn();
+    } else {
+      pageTop.fadeOut();
+    }
+  });
+});
+</script>
+</body>
+</html>
+
+
+
