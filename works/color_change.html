@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		.btn{
+			background-color:#333;
+			border:solid 2px #333;
+			color: #fff;
+			line-height: 50px;
+			text-align: center;
+			padding:10px 20px;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<!-- <a href="" class="btn" onclick="color()" title="">ボタン</a>
+ -->
+
+ <input type="button" class="btn" onclick="color()" name="" value="ボタン">
+<script>
+
+function color(){
+	bgc = new Array();
+		bgc[0] = "#7FFFD4";
+		bgc[1] = "#1E90FF";
+		bgc[2] = "#7FFF00";
+		bgc[3] = "#E0FFFF";
+		bgc[4] = "#FDF5E6";
+		bgc[5] = "#ADD8E6";
+
+	n = Math.floor(Math.random()*bgc.length);
+	document.bgColor = bgc[n];
+}
+
+/*
+function color(){
+	bgc = new Array();
+	bgc[0] = "#7FFFD4";
+	bgc[1] = "#1E90FF";
+	bgc[2] = "#7FFF00";
+	bgc[3] = "#E0FFFF";
+	bgc[4] = "#FDF5E6";
+	bgc[5] = "#ADD8E6";
+	n = Math.floor(Math.random()*bgc.length);
+	document.bgColor = bgc[n];
+}
+*/
+</script>
+</body>
+</html>

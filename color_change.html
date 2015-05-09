@@ -12,6 +12,7 @@
 			text-align: center;
 			padding:10px 20px;
 			text-decoration: none;
+			cursor: pointer;
 		}
 	</style>
 </head>
@@ -24,6 +25,20 @@
 
 function color(){
 	bgc = new Array();
+		bgc[0] = "#7FFFD4";
+		bgc[1] = "#1E90FF";
+		bgc[2] = "#7FFF00";
+		bgc[3] = "#E0FFFF";
+		bgc[4] = "#FDF5E6";
+		bgc[5] = "#ADD8E6";
+
+	n = Math.floor(Math.random()*bgc.length);
+	document.bgColor = bgc[n];
+}
+
+/*
+function color(){
+	bgc = new Array();
 	bgc[0] = "#7FFFD4";
 	bgc[1] = "#1E90FF";
 	bgc[2] = "#7FFF00";
@@ -33,7 +48,7 @@ function color(){
 	n = Math.floor(Math.random()*bgc.length);
 	document.bgColor = bgc[n];
 }
-
+*/
 </script>
 </body>
 </html>

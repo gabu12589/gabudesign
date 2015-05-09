@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<style>
+.wrapper{
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.nowwatch{
+	font-size: 50px;
+	font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+	<p class="nowwatch" id="nowwatcharea">※ここに時計が表示されます。</p>
+</div>
+
+<script>
+function setnumber(num) {
+	var ret;
+	if( num < 10 ) {
+		ret = "0" + num;
+	}else {
+		ret = num;
+	}
+	return ret;
+}
+
+function nowwatch() {
+   var now = new Date();
+   var hour = setnumber( now.getHours() );
+   var min = setnumber( now.getMinutes() );
+   var sec = setnumber( now.getSeconds() );
+   var msg = "現在時刻は、" + hour + ":" + min + ":" + sec + " です。";
+   document.getElementById("nowwatcharea").innerHTML = msg;
+}
+setInterval('nowwatch()', 1000);
+</script>
+
+
+
+
+
+<script>
+<!--
+i = 0;
+                    //配列を作成
+color = new Array("red","blue","green","yellow","purple");
+function change(){            //配列の値を背景色に
+    i++;
+    if(i >= color.length) {
+        i = 0;
+    }
+    document.bgColor = color[i];
+}
+function tm(){                //タイマーをセット
+    document.bgColor = color[i];
+    tm = setInterval("change()",5000);
+}
+//-->
+</script>
+
+<script>
+i = 0;
+
+color = new Array()
+function change(){
+	i++;
+	if()
+}
+</script>
+</body>
+</html>
