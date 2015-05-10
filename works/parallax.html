@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>parallax</title>
+<style>
+body {
+    height: 18000px;
+}
+.num {
+    margin: 0;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+.box {
+    position: fixed;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+}
+#box1 {
+    background: #fe2902;
+    left: 10px;
+}
+#box2 {
+    background: #fe7833;
+    left: 120px;
+}
+#box3 {
+    background: #feb468;
+    left: 230px;
+}
+#box4 {
+    background: #fee09c;
+    left: 340px;
+}
+#box5 {
+    background: #fed09c;
+    left: 450px;
+}
+#box6 {
+    background: #fea08c;
+    left: 560px;
+}
+#box7 {
+    background: #feb09c;
+    left: 670px;
+}
+#box8 {
+    background: #fef09c;
+    left: 780px;
+}
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 80px;
+    padding: 20px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+    <div id="box3" class="box"></div>
+    <div id="box4" class="box"></div>
+    <div id="box5" class="box"></div>
+    <div id="box6" class="box"></div>
+    <div id="box7" class="box"></div>
+    <div id="box8" class="box"></div>
+
+<p id="page-top"><a href="">Top</a></p>
+<script>
+$(function() {
+    var top = $('#box1').offset().top; //初期値を取得
+    $(window).scroll(function() {
+        var value = $(this).scrollTop(); //スクロールの値を取得
+        $('#scrollValue').text(value);
+        $('#box1').css('top', top + value / 2);
+        $('#box2').css('top', top + value / 4);
+        $('#box3').css('top', top + value / 6);
+        $('#box4').css('top', top + value / 8);
+        $('#box5').css('top', top + value / 10);
+        $('#box6').css('top', top + value / 12);
+        $('#box7').css('top', top + value / 14);
+        $('#box8').css('top', top + value / 16);
+    });
+});
+</script>
+
+<script>
+	$(function(){
+  	$('#page-top').hide();
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 100){
+				$("#page-top").fadeIn();
+			} else {
+				$("#page-top").fadeOut();
+			}
+		});
+		$("#page-top").click(function(){
+			$('body,html').animate({
+				scrollTop:0
+			}, 500);
+			return false;
+		});
+	});
+</script>
+
+
+</body>
+</html>

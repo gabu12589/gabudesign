@@ -2,10 +2,10 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>test</title>
+<title>color_watch</title>
 <style>
 .wrapper{
-	width: 700px;
+	width: 760px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -13,10 +13,14 @@
 .nowwatch{
 	font-size: 50px;
 	font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+	padding-top: 200px;
+	font-weight: bold;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
-<body>
+<body id="box">
 
 <div class="wrapper">
 	<p class="nowwatch" id="nowwatcharea">※ここに時計が表示されます。</p>
@@ -45,36 +49,25 @@ setInterval('nowwatch()', 1000);
 </script>
 
 
-
-
-
 <script>
-<!--
-i = 0;
-                    //配列を作成
-color = new Array("red","blue","green","yellow","purple");
-function change(){            //配列の値を背景色に
-    i++;
-    if(i >= color.length) {
-        i = 0;
-    }
-    document.bgColor = color[i];
+$(function() {
+	$('#box').css({backgroundColor: 'rgb(' + changeBgColor() + ')'});
+	setInterval(function(){
+		$('#box').css({backgroundColor: 'rgb(' + changeBgColor() + ')'})}
+		, 3000);
+});
+
+function changeBgColor() {
+	var r, g, b, rgbColors;
+	r = Math.floor(Math.random() * 255);
+	g = Math.floor(Math.random() * 255);
+	b = Math.floor(Math.random() * 255);
+	rgbColors = r + ',' + g + ',' + b;
+	return rgbColors;
 }
-function tm(){                //タイマーをセット
-    document.bgColor = color[i];
-    tm = setInterval("change()",5000);
-}
-//-->
 </script>
 
-<script>
-i = 0;
 
-color = new Array()
-function change(){
-	i++;
-	if()
-}
-</script>
+
 </body>
 </html>

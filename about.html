@@ -66,38 +66,9 @@
 
 <footer id="footer">
 	<address>Copyright &copy; <a href="mailto:<?php bloginfo('admin_email'); ?>">Gabu Design</a>, All rights reserved.</address>
-	<div class="footer-inner">
-		<a href="#" id="page-top1">top</a>
-	</div>
+	<p id="page-top"><a href="#wrap">TOP</a></p>
 </footer>
 
-
-
-<script>
-  $(function(){
-    $("#menu").slicknav;
-  });
-</script>
-
-<script>
-$(function(){
-  var pageTop = $("#page-top");
-
-  pageTop.hide();
-
-  pageTop.click(function () {
-    $('body, html').animate({ scrollTop: 0 }, 500);
-    return false;
-  });
-  $(window).scroll(function () {
-    if($(this).scrollTop() >= 200) {
-      pageTop.fadeIn();
-    } else {
-      pageTop.fadeOut();
-    }
-  });
-});
-</script>
 </body>
 </html>
 

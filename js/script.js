@@ -13,20 +13,34 @@ $(window).resize(function () {
     $("#s01").css("height", hsize + "px");
 });
 
+
 $(function(){
-  var pageTop = $("#page-top");
-
-  pageTop.hide();
-
-  pageTop.click(function () {
-    $('body, html').animate({ scrollTop: 0 }, 500);
-    return false;
-  });
-  $(window).scroll(function () {
-    if($(this).scrollTop() >= 200) {
-      pageTop.fadeIn();
+  $('#page-top').hide();
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 100){
+      $("#page-top").fadeIn();
     } else {
-      pageTop.fadeOut();
+      $("#page-top").fadeOut();
     }
   });
+  $('#page-top').click(function(){
+    $('body,html').animate({
+      scrollTop:0
+    }, 500);
+    return false;
+  });
 });
+
+ $(function() {
+    var navBox = $("#headbar");
+    navBox.hide();
+    var TargetPos = 500;
+    $(window).scroll( function() {
+       if( $(window).scrollTop() > TargetPos ) {
+          navBox.fadeIn();
+       }
+       else {
+          navBox.fadeOut();
+       }
+    });
+ });
